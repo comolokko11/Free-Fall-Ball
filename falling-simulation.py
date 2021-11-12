@@ -1,5 +1,6 @@
 from DrawingPanel import *
 import math
+import time
 
 A= 5
 v1 = 25
@@ -17,16 +18,16 @@ def time(a,b,c):
 t1 = time(A,v1,-h1)
 t2 = time(A,v2,-h2)
 
-print(t1, "&", t2)
+#print(t1, "&", t2)
 
-#from DrawingPanel import *
-#import time
-#panel=DrawingPanel(300,300,"light blue")
-#for i in range (0,8):
-#    panel.clear()
-#    panel.fill_oval(10, 10+i*30, 20, 20,"red")
-#    panel.sleep(880)
-#for j in range (0,8):
-#    panel.clear()
-#    panel.fill_oval(200, 50+j*24, 20, 20,"blue")
-#    panel.sleep(868)
+p = DrawingPanel(600, 600, "gray")
+
+for i in range (0, int(t1)):
+    p.clear()
+    p.fill_oval(100, 10+i*60, 20, 20, "yellow")
+    p.sleep(t1*100)
+    
+for j in range (0, int(t2)):
+    p.clear()
+    p.fill_oval(400, 110+j*48, 20, 20,"purple")
+    p.sleep(t2*100)
